@@ -117,7 +117,7 @@ public class RegisterActivity extends AppCompatActivity {
                     String device_token = FirebaseInstanceId.getInstance().getToken();
                     HashMap<String, String> userMap = new HashMap<>();
                     userMap.put("name", display_name);
-                    userMap.put("status", "Hi there I'm using Lapit Chat App.");
+                    userMap.put("status", "Hi there I'm using Hamro Messenger.");
                     userMap.put("image", "default");
                     userMap.put("thumb_image", "default");
                     userMap.put("device_token", device_token);
