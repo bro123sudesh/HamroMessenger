@@ -37,6 +37,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 
 import org.w3c.dom.Text;
@@ -150,13 +151,14 @@ public class ChatActivity extends AppCompatActivity {
 
                 String online = dataSnapshot.child("online").getValue().toString();
                 String image = dataSnapshot.child("image").getValue().toString();
+                String userThumb = dataSnapshot.child("thumb_image").getValue().toString();
 
                 if(online.equals("true")) {
 
                     mLastSeenView.setText("Online");
 
                 } else {
-
+                    Picasso.with(getBaseContext()).load(userThumb).into(mProfileImage);
                     GetTimeAgo getTimeAgo = new GetTimeAgo();
 
                     long lastTime = Long.parseLong(online);
