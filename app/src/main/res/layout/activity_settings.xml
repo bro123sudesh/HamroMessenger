@@ -6,14 +6,18 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
     tools:context="com.example.sudu.chatapp.SettingsActivity">
-
+    <include
+        android:id="@+id/setting_appBar"
+        layout="@layout/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/settings_image"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:src="@drawable/default_avatar" />
 
     <TextView

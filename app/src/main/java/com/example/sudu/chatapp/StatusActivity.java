@@ -76,6 +76,7 @@ public class StatusActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
 
                             mProgress.dismiss();
+                            Toast.makeText(getApplicationContext(), "Your status has been successfully changed.", Toast.LENGTH_LONG).show();
 
                         } else {
 

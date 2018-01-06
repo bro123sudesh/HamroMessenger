@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="in.tvac.akshaye.lapitchat.StatusActivity">
+    tools:context="com.example.sudu.chatapp.StatusActivity">
 
     <include
         android:id="@+id/status_appBar"
@@ -35,6 +34,9 @@
         android:layout_alignEnd="@+id/status_input"
         android:layout_below="@+id/status_input"
         android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/btnback"
         android:backgroundTint="@color/colorAccent"
         android:text="SAVE CHANGES"
         android:textColor="@android:color/white" />
