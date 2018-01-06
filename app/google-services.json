@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "546237549798",
+    "firebase_url": "https://documents-811a6.firebaseio.com",
+    "project_id": "documents-811a6",
+    "storage_bucket": "documents-811a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546237549798:android:8e872f268d3b026a",
+        "android_client_info": {
+          "package_name": "com.example.sudu.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546237549798-vjel43m4bp84mgi967st2av254ct1i9a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sudu.chatapp",
+            "certificate_hash": "52c4bc2a19be5e1c078b27c32e4da52e72b04155"
+          }
+        },
+        {
+          "client_id": "546237549798-gtu8qd5qpai6eg1qg481rnegca4khho9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZi-aAYhTPwNrDSC-fiK9135BO7qLh4NI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546237549798-gtu8qd5qpai6eg1qg481rnegca4khho9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
