@@ -1,5 +1,7 @@
 package com.example.sudu.chatapp;
 
+import android.content.SharedPreferences;
+
 /**
  * Created by AkshayeJH on 24/07/17.
  */
@@ -9,6 +11,7 @@ public class Messages {
     private String message, type;
     private long  time;
     private boolean seen;
+
 
     private String from;
 

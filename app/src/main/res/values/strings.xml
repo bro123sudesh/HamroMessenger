@@ -18,5 +18,12 @@
     <string name="login">LOGIN</string>
     <string name="login_to_your_account">Login to your Account</string>
     <string name="your_email">Your Email</string>
+    <string name="this_is_a_avatar_of_user">this is a avatar of user</string>
+    <string name="message_text">Message Text</string>
+    <string name="time">00:00</string>
+    <string name="enter_message">Enter Message...</string>
+    <string name="total_friends">Total Friends</string>
+    <string name="send_friend_request">SEND FRIEND REQUEST</string>
+    <string name="decline_friend_request">DECLINE FRIEND REQUEST</string>
 
 </resources>

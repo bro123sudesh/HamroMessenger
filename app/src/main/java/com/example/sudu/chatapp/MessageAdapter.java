@@ -1,13 +1,17 @@
 package com.example.sudu.chatapp;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Message;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,6 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -32,8 +38,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     private List<Messages> mMessageList;
     private DatabaseReference mUserDatabase;
 
-    public MessageAdapter(List<Messages> mMessageList) {
 
+    public MessageAdapter(List<Messages> mMessageList) {
         this.mMessageList = mMessageList;
 
     }
@@ -54,6 +60,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         public CircleImageView profileImage;
         public TextView displayName;
         public ImageView messageImage;
+        public TextView timeText;
 
         public MessageViewHolder(View view) {
             super(view);
@@ -62,12 +69,14 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             profileImage = (CircleImageView) view.findViewById(R.id.message_profile_layout);
             displayName = (TextView) view.findViewById(R.id.name_text_layout);
             messageImage = (ImageView) view.findViewById(R.id.message_image_layout);
+            timeText=(TextView)view.findViewById(R.id.time_text_layout);
 
         }
     }
 
     @Override
     public void onBindViewHolder(final MessageViewHolder viewHolder, int i) {
+
 
         Messages c = mMessageList.get(i);
 
@@ -84,6 +93,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
                 String name = dataSnapshot.child("name").getValue().toString();
                 String image = dataSnapshot.child("thumb_image").getValue().toString();
 
+
                 viewHolder.displayName.setText(name);
 
                 Picasso.with(viewHolder.profileImage.getContext()).load(image)
@@ -97,8 +107,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             }
         });
 
+        SimpleDateFormat sfd=new SimpleDateFormat("HH:mm");
+        String abc=sfd.format(new Time(c.getTime()));
+        viewHolder.timeText.setText(abc);
         if(message_type.equals("text")) {
-
             viewHolder.messageText.setText(c.getMessage());
             viewHolder.messageImage.setVisibility(View.INVISIBLE);
 

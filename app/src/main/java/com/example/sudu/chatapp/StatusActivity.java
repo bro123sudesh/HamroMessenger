@@ -1,6 +1,7 @@
 package com.example.sudu.chatapp;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -77,7 +78,9 @@ public class StatusActivity extends AppCompatActivity {
 
                             mProgress.dismiss();
                             Toast.makeText(getApplicationContext(), "Your status has been successfully changed.", Toast.LENGTH_LONG).show();
-
+                            Intent intent=new Intent(StatusActivity.this,SettingsActivity.class);
+                            finish();
+                            startActivity(intent);
                         } else {
 
                             Toast.makeText(getApplicationContext(), "There was some error in saving Changes.", Toast.LENGTH_LONG).show();

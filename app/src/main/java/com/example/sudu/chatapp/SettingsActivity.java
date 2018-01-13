@@ -78,10 +78,9 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
         mToolbar = (Toolbar) findViewById(R.id.setting_appBar);
         setSupportActionBar(mToolbar);
-
+        getSupportActionBar().setTitle("Account Settings");
         ActionBar actionBar = getSupportActionBar();
 
         actionBar.setDisplayHomeAsUpEnabled(true);
